@@ -330,7 +330,6 @@ footer i:hover {
 .project-desc {
     color: var(--secondary-color);
     margin-bottom: 2em;
-    width: 40%;
 }
 
 .intro-works-padding {
@@ -341,14 +340,6 @@ footer i:hover {
     padding: 80px 0;
 }
 
-.project-intro {
-    padding-right: 5em;
-}
-
-.project-intro-right {
-    padding-left: 5em;
-}
-
 .project-heading {
     font-size: 1.6em;
     margin: 0.5em 0;
@@ -356,6 +347,10 @@ footer i:hover {
 
 .project-text {
     color: var(--secondary-color);
+}
+
+.project-text-condensed {
+    width: 80%;
 }
 
 .project-img01 {
@@ -379,7 +374,6 @@ footer i:hover {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .links {
     text-decoration: none;
@@ -452,6 +446,10 @@ footer i:hover {
         grid-template-columns: 1fr;
     }
 
+    nav {
+        width: 100%;
+    }
+
     .logo {
         font-size: 0.8em;
         position: relative;
@@ -479,7 +477,7 @@ footer i:hover {
     i {
         font-size: 1.2em;
         position: relative;
-        top: 2 px;
+        top: 2px;
     }
 
     section .intro-wrap {
@@ -533,37 +531,25 @@ footer i:hover {
         font-size: 1.5em;
     }
 
+    /* Works Page */
+
     .project-title {
+        font-size: 1.5em;
         margin-top: -0.5em;
     }
 
-    /* Works Page */
-
     .project-heading {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .project-desc {
         color: var(--secondary-color);
         margin-bottom: 2em;
-        width: 91%;
+        font-size: 1em;
     }
 
     figcaption {
         font-size: 0.8em;
-    }
-
-    .project-text {
-        font-size: 0.8em;
-        padding-right: 1.6em;
-    }
-
-    .project-intro {
-        padding-right: 0;
-    }
-
-    .project-intro-right {
-        padding-left: 0;
     }
 
     .project-center {
@@ -581,6 +567,10 @@ footer i:hover {
     .explore-align {
         top: 2px;
         left: -2px;
+    }
+
+    .project-text {
+        width: 97%;
     }
 
 }
