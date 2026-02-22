@@ -125,10 +125,9 @@ ul {
 }
 
 section .intro-wrap {
-    max-width: 520px;
-    font-size: 1.5em;
+    max-width: 460px;
+    font-size: 1.1em;
     letter-spacing: -0.3px;
-    margin-left: 24px;
     color: var(--secondary-color);
 }
 
@@ -137,7 +136,7 @@ section .intro-wrap {
 }
 
 .img-holder {
-    max-width: 56px;
+    max-width: 48px;
 }
 
 .img-holder img {
@@ -148,12 +147,13 @@ section .intro-wrap {
 
 section .img-holder img {
     border-radius: 50%;
-    margin-top: 8px;
     object-fit: cover;
 }
 
 section .container {
     display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 /* Work Section */
@@ -491,6 +491,10 @@ footer i:hover {
 
     .work-text {
         font-size: 0.8em;
+    }
+
+    .img-project {
+        order: -1;
     }
 
     .work-type,
