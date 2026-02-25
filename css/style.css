@@ -27,6 +27,23 @@ figcaption {
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* Initial hidden state */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.9s ease-out;
+    will-change: opacity, transform;
+}
+
+/* When visible */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* //////////////////// */
+
+
 /* Utility Classes*/
 
 .container {
@@ -347,6 +364,7 @@ footer i:hover {
 
 .project-text {
     color: var(--secondary-color);
+    line-height: 24px;
 }
 
 .project-text-condensed {
