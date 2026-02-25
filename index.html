@@ -63,12 +63,12 @@
     <!-- Intro Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="img-holder">
+            <div class="img-holder reveal">
                 <img src="./images/enrique-rosalin.png"
                     alt="Enrique Rosalin - UI UX Designer | Website Designer | Brand Identity Designer" loading="lazy">
             </div>
 
-            <div class="intro-wrap">
+            <div class="intro-wrap reveal">
                 <p>UI Designer bridging the gap between high-fidelity aesthetics and functional web and mobile
                     experiences</p>
             </div>
@@ -78,7 +78,7 @@
     <!-- Work Section -->
 
     <section class="work-padding">
-        <div class="container work-header">
+        <div class="container work-header reveal">
             <div>
                 <p class="work-text">Recent Work</p>
             </div>
@@ -90,7 +90,7 @@
 
     <section class="recent-works-padding">
         <div class="container">
-            <div class="grid-container">
+            <div class="grid-container reveal">
                 <div>
                     <p class="work-type">Freelance Project | UI Redesign</p>
                     <p class="work-desc">Website Refresh: Elevating a B2B platform to better showcase projects,
@@ -109,7 +109,7 @@
 
     <section class="recent-works-padding">
         <div class="container">
-            <div class="grid-container">
+            <div class="grid-container reveal">
                 <div>
                     <p class="work-type">End-to-End Product Design and Branding</p>
                     <p class="work-desc">Concept Project: Data-driven skincare companion app, designed from visual
@@ -129,7 +129,7 @@
 
     <section class="recent-works-padding">
         <div class="container">
-            <div class="grid-container">
+            <div class="grid-container reveal">
                 <div>
                     <p class="work-type">Design and Front-end Development</p>
                     <p class="work-desc">From Figma to GitHub: A responsive portfolio built from scratch
@@ -152,7 +152,7 @@
 
     <section class="outro-padding">
         <div class="container">
-            <div class="grid-container">
+            <div class="grid-container reveal">
                 <div>
                     <p class="outroName"><span class="highlight">Enrique</span> Rosalin</p>
                 </div>
@@ -174,9 +174,9 @@
     <!--Footer-->
     <footer class="footer-padding">
         <div class="container">
-            <div class="grid-container">
+            <div class="grid-container reveal">
                 <div>
-                    <p>&copy; 2025 — Enrique Rosalin</p>
+                    <p>&copy; 2026 — Enrique Rosalin</p>
                 </div>
                 <div class="icon-social">
                     <a href="https://ph.pinterest.com/evokerdesign/"><i class="icon-space ri-pinterest-line"></i></a>
@@ -197,6 +197,24 @@
             } else {
                 nav.classList.remove('scrolled');
             }
+        });
+    </script>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
         });
     </script>
 </body>
