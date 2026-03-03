@@ -10,6 +10,7 @@
 :root {
     --primary-color: #ededed;
     --secondary-color: #777;
+    --tertiary-color: #999;
 }
 
 body {
@@ -338,6 +339,12 @@ footer i:hover {
 
 /* Project Pages */
 
+.condensed {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .project-title {
     font-size: 2em;
     padding-bottom: 0.2em;
@@ -354,7 +361,7 @@ footer i:hover {
 }
 
 .solo-works-padding {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .project-heading {
@@ -363,12 +370,8 @@ footer i:hover {
 }
 
 .project-text {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     line-height: 24px;
-}
-
-.project-text-condensed {
-    width: 80%;
 }
 
 .project-img01 {
@@ -379,16 +382,8 @@ footer i:hover {
     width: 100%;
 }
 
-.project-img02 {
-    overflow: hidden;
-}
-
-.project-img02 img {
-    width: 100%;
-}
-
 .project-center {
-    width: 67%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -498,6 +493,10 @@ footer i:hover {
         top: 2px;
     }
 
+    .highlight {
+        font-weight: 400;
+    }
+
     section .intro-wrap {
         font-size: 1em;
         font-weight: 400;
@@ -592,8 +591,9 @@ footer i:hover {
     }
 
     .project-text {
-        width: 97%;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
+        font-weight: 300;
+        color: var(--tertiary-color);
     }
 
 }
