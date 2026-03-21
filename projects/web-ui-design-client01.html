@@ -50,7 +50,7 @@
     </nav>
 
     <div class="condensed">
-        <section class="intro-works-padding">
+        <section class="intro-works-padding reveal">
             <div class="container">
                 <div>
                     <div>
@@ -81,7 +81,7 @@
 
         <section class="solo-works-padding">
             <div class="container">
-                <div class="grid-container">
+                <div class="project-center">
                     <div class="project-intro">
                         <p class="project-heading">02. Research and Inspiration</p>
                         <p class="project-text">
@@ -100,23 +100,13 @@
                             were well aligned.
                         </p>
                     </div>
-                    <div class="project-img01">
-                        <img src="../images/Kayakana_Skincare02.png" alt="">
-                    </div>
                 </div>
             </div>
         </section>
 
         <section class="solo-works-padding">
             <div class="container">
-                <img src="../images/Client_Image01.png" alt=""></img>
-            </div>
-        </section>
-
-
-        <section class="solo-works-padding">
-            <div class="container">
-                <div class="grid-container">
+                <div class="project-center">
                     <div class="project-intro">
                         <p class="project-heading">03. Sketches to Wireframes</p>
                         <p class="project-text">
@@ -138,9 +128,6 @@
                             areas.
                         </p>
                     </div>
-                    <div class="project-img01">
-                        <img src="../images/Kayakana_Skincare02.png" alt="">
-                    </div>
                 </div>
             </div>
         </section>
@@ -148,10 +135,7 @@
 
         <section class="solo-works-padding">
             <div class="container">
-                <div class="grid-container">
-                    <div class="project-img01">
-                        <img src="../images/" alt="">
-                    </div>
+                <div class="project-center">
                     <div class="project-intro-right">
                         <p class="project-heading">04. Constraints and the Challenges</p>
                         <p class="project-text">
@@ -288,6 +272,25 @@
             }
         });
     </script>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+    </script>
+
 </body>
 
 </html>
