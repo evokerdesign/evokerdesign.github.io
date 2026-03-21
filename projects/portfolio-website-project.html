@@ -51,7 +51,7 @@
 
     <div class="condensed">
 
-        <section class="intro-works-padding">
+        <section class="intro-works-padding reveal">
             <div class="container">
                 <div>
                     <div>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-heading">01. Project Overview</p>
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-heading">02. Challenges and Constraints</p>
@@ -115,7 +115,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <figure>
                     <p class="project-heading">03. Research and Inspiration</p>
@@ -131,7 +131,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-text">
@@ -146,9 +146,7 @@
             </div>
         </section>
 
-
-
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <figure>
                     <p class="project-heading">04. Sketches and Wireframes</p>
@@ -162,7 +160,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-text">
@@ -174,7 +172,7 @@
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <figure>
                     <p class="project-heading">05. Implementation and Testing</p>
@@ -182,13 +180,14 @@
                     <img src="../images/enrique-rosalin-portfolio/enrique-rosalin-portfolio-html-css.webp"
                         alt="Screenshot of HTML and CSS written on Visual Studio Code" loading="lazy"></img>
                     <figcaption>
-                        05. HTML and CSS code snippets for my portfolio website on Visual Studio Code.
+                        05. HTML, CSS and a browser extesion for testing media queries and responsiveness on Visual
+                        Studio Code
                     </figcaption>
                 </figure>
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-text">
@@ -199,19 +198,11 @@
                         with clear sections for layout, typography and color variables to keep it scalable and
                         systemized.
                     </p>
-                    <br>
-                    <p class="project-text">
-                        To ensure my portfolio reads well on small devices, I applied <span class="highlight">media
-                            queries</span> and tested them on <span class="highlight"><a class="links" target=""
-                                href="https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk?hl=en-US&pli=1">Mobile
-                                Simulator<i class="ri-arrow-right-up-line explore-align"></i></a></span> a google chrome
-                        extension.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-heading">06. The Complete Design</p>
@@ -231,8 +222,7 @@
             </div>
         </section>
 
-
-        <section class="solo-works-padding">
+        <section class="solo-works-padding reveal">
             <div class="container">
                 <div class="project-center">
                     <p class="project-heading">07. Learnings and Reflections</p>
@@ -312,6 +302,24 @@
             } else {
                 nav.classList.remove('scrolled');
             }
+        });
+    </script>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
         });
     </script>
 </body>
