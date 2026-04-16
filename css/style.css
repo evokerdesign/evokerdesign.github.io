@@ -208,6 +208,14 @@ section .container {
     padding-right: 4em;
 }
 
+.onyourleft {
+    padding-left: 4em;
+}
+
+.onyourleft .work-desc {
+    padding-right: 0;
+}
+
 .work-explore {
     font-size: 0.9em;
     text-decoration: none;
@@ -455,7 +463,7 @@ footer i:hover {
     }
 
     nav {
-        /* width: 100%; */
+        width: 100%;
     }
 
     .logo {
@@ -471,6 +479,11 @@ footer i:hover {
 
     a {
         font-size: 0.8em;
+    }
+
+    .intro-wrap p {
+        font-size: 0.9em;
+        padding-right: 1em;
     }
 
     .work-desc {
@@ -506,6 +519,10 @@ footer i:hover {
         font-size: 0.8em;
     }
 
+    .onyourleft {
+        padding-left: 0em;
+    }
+
     .img-project {
         order: -1;
     }
@@ -539,7 +556,6 @@ footer i:hover {
         padding-right: 0.7em;
         font-weight: 300;
     }
-    
 
     footer {
         font-size: 0.8em;
