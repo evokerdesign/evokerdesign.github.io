@@ -364,6 +364,16 @@ footer i:hover {
     margin-bottom: 2em;
 }
 
+.project-specs {
+    line-height: 24px;
+    color: var(--tertiary-color);
+}
+
+.emph {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
 .intro-works-padding {
     padding-top: 120px;
 }
@@ -389,6 +399,12 @@ footer i:hover {
 .project-center {
     justify-content: center;
     margin: 0 120px;
+}
+
+.work-link-desc {
+    width: 80%;
+    padding-bottom: 0.3em;
+    font-size: 1.4em;
 }
 
 .links {
@@ -582,6 +598,15 @@ footer i:hover {
         font-size: 1em;
     }
 
+    .project-specs {
+        color: var(--secondary-color);
+    }
+
+    .emph {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
     figcaption {
         font-size: 0.8em;
     }
@@ -607,6 +632,12 @@ footer i:hover {
         margin-bottom: 2em;
         font-weight: 300;
         color: var(--tertiary-color);
+    }
+
+    .work-link-desc {
+        padding-bottom: 0.3em;
+        font-size: 1.2em;
+        width: 100%;
     }
 
 }
