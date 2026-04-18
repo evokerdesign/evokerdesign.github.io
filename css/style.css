@@ -26,6 +26,11 @@ figcaption {
     color: var(--secondary-color);
 }
 
+::selection {
+    background-color: #2a2525;
+    color: var(--tertiary-color);
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Initial hidden state */
@@ -605,10 +610,6 @@ footer i:hover {
     .emph {
         color: var(--primary-color);
         font-weight: 600;
-    }
-
-    figcaption {
-        font-size: 0.8em;
     }
 
     .solo-works-padding {
